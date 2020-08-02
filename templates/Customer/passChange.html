@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet"  href="/css/passChange.css" />
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/myfocus-2.0.1.min.js"></script>
+    <script type="text/javascript" src="/js/SuperSlide.js"></script>
+    <script src="/js/cus.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>
+        <small>修改密码</small></h1>
+    <form>
+        <div class="formData">
+            <div class="formDiv">
+                <input type="text" id="email" required>
+                <label class="label">输入您的邮箱账号</label>
+            </div>
+            <div class="formDiv">
+                <input type="password" id="oldPass" required>
+                <label class="label">原始密码</label>
+            </div>
+            <div class="formDiv">
+                <input type="password"  id="newPass" required>
+                <label class="label">新密码</label>
+            </div>
+            <div class="formDiv">
+                <input type="password" id="newPassAgain" required>
+                <label class="label">再次确认新密码</label>
+            </div>
+        </div>
+
+<!--        <button id="submit" onclick="passChange()">-->
+<!--            <span>提交</span>-->
+<!--        </button>-->
+        <input id="submit" type="button" value="提交" onclick="passChange()" class="cl">
+    </form>
+</div>
+<script>
+</script>
+</body>
+</html>

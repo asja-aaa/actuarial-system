@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>保险公司销售管理</title>
+  <link rel="stylesheet" href="/first/resources/Manager/css/layui.css"  media="all">
+
+  <style>
+ 
+  </style>
+
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+  <div class="layui-header">
+    <div class="layui-logo" style="font-size: 25px;">北邮太平</div>
+    <!-- 头部区域（可配合layui已有的水平导航） -->
+    
+    <ul class="layui-nav layui-layout-right">
+      <li class="layui-nav-item">
+        <a href="javascript:;">
+          <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+          SGNB
+        </a>
+        <dl class="layui-nav-child">
+          <dd><a href="">基本资料</a></dd>
+          <dd><a href="">安全设置</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item"><a href="">退出</a></li>
+    </ul>
+  </div>
+  
+  <div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll">
+      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+      <ul class="layui-nav layui-nav-tree "  lay-filter="test">
+        <li class="layui-nav-item layui-nav-itemed">
+          <a class="" href="javascript:;">订单查询</a>
+          <dl class="layui-nav-child">
+            <dd><a href="/first/saler/toPersonOrder" target="iframe_a">个人保险订单</a></dd>
+            <dd><a href="grouporder.html" target="iframe_a">团体保险订单</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item"><a href="companycollect.html" target="iframe_a">保险产品分配</a></li>
+        <li class="layui-nav-item">
+          <a href="javascript:;">保险产品查看</a>
+          <dl class="layui-nav-child">
+            <dd><a href="searchpro.html" target="iframe_a">个人保险产品</a></dd>
+            <dd><a href="searchpro.html" target="iframe_a">团体保险产品</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item"><a href="../个人中心/个人中心.html"target="iframe_a">>个人中心</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="layui-body" id="main" src="index1.html" name="iframe_a" frameborder="1" >
+    <!-- 内容主体区域 -->
+
+        <iframe class="frame" src="searchpro.html" name="iframe_a" frameborder="1" height="100%" width="100%" >
+        </iframe>
+
+  </div>
+  
+  
+  <div class="layui-footer">
+    <!-- 底部固定区域 -->
+    © layui.com - 底部固定区域
+  </div>
+</div>
+<script src="/first/resources/Manager/layui.js"></script>
+<script>
+//JavaScript代码区域
+layui.use('element', function(){
+  var element = layui.element;
+  
+});
+</script>
+</body>
+</html>
