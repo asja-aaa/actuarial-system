@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>layui</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="/resources/Manager/css/layui.css"  media="all">
+  <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+</head>
+<body>
+    
+<div class="demoTable" style="margin-left: 400px;">
+  搜索订单号：
+  <div class="layui-inline">
+    <input class="layui-input" name="id" id="demoReload" autocomplete="off">
+  </div>
+  <button class="layui-btn" data-type="reload">搜索</button>
+</div>
+   
+<table class="layui-hide" id="demo"></table>
+               
+      
+<script src="/resources/Manager/layui.js" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+layui.use('table', function(){
+  var table = layui.table;
+  
+  //展示已知数据
+  table.render({
+    elem: '#demo'
+    ,toolbar:'#toolbarDemo'
+    ,cols: [[ //标题栏
+      {field: 'id', title: '员工ID', width: 80, sort: true}
+      ,{field: 'name', title: '姓名', width: 80}
+      ,{field: 'phonenumber', title: '所属部门', width: 120}
+      ,{field: 'product', title: '选购保险产品', minWidth: 100}
+      ,{field: 'money', title: '保险产品编号', width: 120, sort: true}
+      ,{field: 'start', title: '申请时间', width: 100, sort: true}
+    ]]
+    ,data: [{
+      "id": "10001"
+      ,"name": "鱼子酱"
+      ,"sex": "男"
+      ,"number": "340222199908300010"
+      ,"phonenumber": "18810005532"
+      ,"product": "雇主责任险"
+      ,"money": "126"
+      ,"start": "2019-7-29"
+      ,"time": "365"
+      ,"end": "2020-7-29"
+      ,"state":"有效"
+    }, {
+      "id": "10001"
+      ,"name": "鱼子酱"
+      ,"sex": "男"
+      ,"number": "340222199908300010"
+      ,"phonenumber": "18810005532"
+      ,"product": "雇主责任险"
+      ,"money": "126"
+      ,"start": "2019-7-29"
+      ,"time": "365"
+      ,"end": "2020-7-29"
+      ,"state":"有效"
+    }, {
+      "id": "10001"
+      ,"name": "鱼子酱"
+      ,"sex": "男"
+      ,"number": "340222199908300010"
+      ,"phonenumber": "18810005532"
+      ,"product": "雇主责任险"
+      ,"money": "126"
+      ,"start": "2019-7-29"
+      ,"time": "365"
+      ,"end": "2020-7-29"
+      ,"state":"有效"
+    }]
+    //,skin: 'line' //表格风格
+    ,even: true
+    ,page: true //是否显示分页
+    //,limits: [5, 7, 10]
+    ,limit: 10 //每页默认显示的数量
+  });
+});
+</script>
+
+</body>
+</html>

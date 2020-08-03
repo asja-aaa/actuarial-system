@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+}
+body{
+
+}
+input{
+    padding-left: 36px;
+    outline: none;
+    color: #333;
+    /* border-color: #dbe1ea; */
+    border: 1px solid #dbe1ea;
+    /* border-color: red; */
+    /* background-color: orange;
+    border: none; */
+    
+    /* font-size: 14px; */
+}
+
+/* 使用webkit内核的浏览器 */
+input::-webkit-input-placeholder{
+    color: #bac3d3;
+}
+/* Firefox版本4-18 */
+input:-moz-placeholder{
+    
+}
+/* Firefox版本19+ */            
+input::-moz-placeholder{
+
+}
+/* IE浏览器 */               
+input:-ms-input-placeholder{
+
+}
+
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    vertical-align:middle;
+    /* line-height: 17px; */
+    margin-top:0;
+    background:#fff;
+    border:#dbe1ea solid 1px;
+    border-radius: 2px;
+    min-height: 15px;
+    min-width: 15px;
+    padding: 0;
+    position: relative;
+}
+input[type="checkbox"]:checked {
+    background: #3190e8;
+}
+input[type=checkbox]:checked::after{
+    content: '';
+    top: 2px;
+    left: 2px;
+    position: absolute;
+    background: transparent;
+    border: #fff solid 2px;
+    border-radius: 2px;
+    border-top: none;
+    border-right: none;
+    height: 4px;
+    width: 8px;
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg); 
+    transform: rotate(-45deg);
+}
+
+
+
+.l_float{
+    float: left;
+}
+
+.r_float{
+    float: right;
+}
+
+.l_clear{
+    clear: left;
+    display: block;
+    overflow: hidden;
+    content: "";
+}
+
+.r_clear{
+    clear: right;
+    display: block;
+    overflow: hidden;
+    content: "";
+}
+
+.b_clear{
+    clear: both;
+    display: block;
+    overflow: hidden;
+    content: "";
+}
+
+.show{
+    display: block;
+}
+
+.hidden{
+    display: none;
+}
+
+/* 页面头部 */
+
+header{
+    min-width:1200px;
+     
+    background-color:#fff;
+    border-bottom: 1px solid #e6e6e6;
+}
+nav{
+    max-width:1200px;
+    margin: 0 auto;
+
+    /* height: 60px; */
+    padding: 14px 0;
+    /* box-sizing: border-box; */
+}
+
+nav>a,nav>a{
+    /* background-color: #3190e8; */
+}
+
+nav>a,nav>a>img{
+    height: 46px;
+    /* background-color: #3190e8; */
+
+    
+}
+.nav_r{
+
+}
+.nav_r>a{
+    padding-left:10px; 
+    line-height: 46px;
+}
+.nav_r>a:first-child{
+    padding-left: 0;
+}
+/* 页面主体 */
+.container{
+    width: 1020px;
+    margin: 0 auto;
+    padding:0 10px 10px;
+    box-sizing: border-box;
+}
+
+.con_l{
+    margin-top: 116px;
+    height: 330px;
+    width: 620px;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow:0 0 6px 2px rgba(0,0,0,.08);
+    -moz-box-shadow:0 0 6px 2px rgba(0,0,0,.08);
+    -webkit-box-shadow:0 0 6px 2px rgba(0,0,0,.08);
+    overflow: hidden;
+
+}
+
+.con_r{
+    margin-top: 98px;
+
+    /* background-color: powderblue; */
+    box-shadow:0 0 6px rgba(0,0,0,.08);
+    -moz-box-shadow:0 0 6px rgba(0,0,0,.08);
+    -webkit-box-shadow:0 0 6px rgba(0,0,0,.08);
+}
+
+/* 表单主体 */
+.login_body{
+    background-color: #fff;
+    padding: 20px;
+    color: #333;
+    /* border: 1px solid salmon; */
+    width: 340px;
+    
+}
+.login_body,.login_otherAccount{
+
+}
+
+.login_body>.login_top{
+    border-bottom: 1px solid #dbe1ea;
+}
+.login_body>.login_top>.top_tag{
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    color: #bac3d3;
+    margin-right: 5px;
+}
+.login_body>.login_top>.top_tag_active{
+    color: #333;
+    border-bottom: 2px solid blue;
+}
+.login_form{
+
+    max-height: 225px;
+}
+.login_form>.qr_code{
+    /* width: 340px;
+    margin: 0 auto; */
+    text-align: center;
+    margin-top: 20px;
+}
+.login_form>.qr_code>p{
+    color: #333
+}
+.login_form>.qr_code>img{
+    /* width: 100px; */
+    height: 175px;
+    background-color: greenyellow;
+
+}
+
+.login_form input[type=text],.login_form input[type=password]{
+    height: 40px;
+    display: block;
+}
+.login_form input[type=text],
+.login_form input[type=password],
+.login_form .auto_login,
+.login_form button{
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login_form .auto_login>input[type=checkbox],
+.login_form .auto_login>label,
+.login_form .auto_login>.forget_password{
+    vertical-align: middle;
+    font-size: 12px;
+}
+.auto_login>a{
+    color: #333;
+    text-decoration: none;
+}
+.auto_login>a:hover{
+    text-decoration: underline;
+}
+.login_form .auto_login>label{
+    padding-left: 5px;
+}
+.login_form input[type=text],
+.login_form input[type=password]{
+    width: 302px;
+}
+.login_form .user_icon,.login_form .pwd_icon{
+    position: relative;
+}
+
+.login_form .user_icon img,.login_form .pwd_icon img{
+    width: 22px;
+    position: absolute;
+}
+.login_form .user_icon img,.login_form .pwd_icon img{
+    top: -32px;
+    left: 8px;
+}
+
+.login_form button{
+    padding: 10px 0;
+    font-size: 16px;
+    width: 340px;
+    background-color: blue;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.login_form button:hover{
+    background-color: rgb(49, 65, 211);
+}
+
+.con_r .login_otherAccount{
+    padding:20px;
+    background-color: #fafbfc;
+    font-size: 12px;
+    border-top: 1px solid #efefef;
+
+}
+.con_r .login_otherAccount span{
+
+}
+
+.con_r .login_otherAccount a{
+    margin-left: 5px;
+}
+
+
+
+.con_r .login_otherAccount a img{
+    width: 20px;
+    vertical-align: middle;
+}

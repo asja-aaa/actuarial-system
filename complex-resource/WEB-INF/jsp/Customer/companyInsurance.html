@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>公司团体保险</title>
+    <link rel="stylesheet"  href="/first/css/customerStaff.css" />
+<!--    <link rel="stylesheet"  type="text/css" href="/css/chart.css" />-->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/first/js/myfocus-2.0.1.min.js"></script>
+    <script type="text/javascript" src="/first/js/SuperSlide.js"></script>
+    <script src="/first/js/cus.js"></script>
+    <script>
+        $(document).ready(function () {
+            var data = window.sessionStorage.getItem("user");
+            console.log(data);
+            if (data != null) {
+                var user = $.parseJSON(data);
+                $(".showName").html(user.email);
+            } else {
+                $(".showName").append("欢迎");
+            }
+        });
+    </script>
+    <style type="text/css">
+        .icons{
+            height: 18px;
+            width: 19px;
+        }
+        .formControl{
+            margin-top: 160px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="/first/css/table.css" />
+</head>
+<body>
+<!-- logo -->
+<div class="top">
+    <div class="logo">
+        <img src="/first/images/logo.png"  alt="BUPT INSURANCE" />
+    </div>
+    <div class="menu">
+        <ul>
+            <li class="showName" style="display:block;padding:5px 25px;background: rgba(255, 52, 14, 0.67);color:#fff;text-decoration:none;"></li>
+            <li><a href="/first/customer/customerIndex" onclick="removeSession()">退出</a></li>
+            <li><a href="/first/customer/cusInfo">个人中心</a></li>
+            <li><a href="/first/customer/cusLogin">登录/注册</a></li>
+        </ul>
+    </div>
+    <div class="headfont">
+        <p>公司保险查询</p>
+    </div>
+</div>
+
+<div class="navbar">
+    <ul class="navbarMenu">
+        <li><a href="">主页</a></li>
+        <li><a href="/first/customer/cusInfo">个人信息管理</a>
+            <ul class="navbarSubmenu">
+                <li><a href="/first/customer/cusInfo">修改个人信息</a></li>
+                <li><a href="/first/customer/bankCard">银行卡管理</a></li>
+            </ul>
+        </li>
+        <li><a href="/first/customer/cus1Buy">购买保险</a>
+            <ul class="navbarSubmenu">
+                <li><a href="/first/customer/cus1Buy">个人保险</a></li>
+                <li><a href="/first/customer/cusBuyteam">团体保险</a></li>
+            </ul>
+        </li>
+        <li><a href="/first/customer/companyInsurance">公司团体保险</a>
+            <ul class="navbarSubmenu">
+            </ul>
+        </li>
+        <li><a href="/first/customer/insuranceSearch">理赔查询</a></li>
+        <li><a href="/first/customer/selfClaim">自助理赔</a></li>
+        <li><a href="/first/customer/passChange">修改密码</a></li>
+    </ul>
+</div>
+
+<div class="formControl">
+    <table width="100%" width="100%" border="0" cellspacing="0" cellpadding="0" class="table1">
+        <thead>
+        <tr>
+            <th>保险名称</th>
+            <th>对应事故</th>
+            <th class="bzjh">保障最低金额</th>
+            <th class="bzjh">最高金额</th>
+            <th class="bzjh">购险时间</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td rowspan="3">
+                <div><p>基础保障</p></div>
+            </td>
+            <td  class="tal">意外伤害身故、残疾</td>
+            <td class="bzjh">20万</td>
+            <td class="bzjh">30万</td>
+            <td class="bzjh">xxxx</td>
+        </tr>
+        <tr>
+            <td  class="tal">意外和疾病住院和门急诊</td>
+            <td class="bzjh">5万</td>
+            <td class="bzjh">15万</td>
+            <td class="bzjh">xxx</td>
+        </tr>
+        <tr>
+            <td  class="tal">意外伤害身故、残疾</td>
+            <td class="bzjh">20万</td>
+            <td class="bzjh">30万</td>
+            <td class="bzjh">xxxx</td>
+        </tr>
+        <tr>
+            <td rowspan="4">
+                <div><p>交通意外</p></div>
+            </td>
+            <td  class="tal">飞机意外伤害身故和残疾</td>
+            <td class="bzjh">30万</td>
+            <td class="bzjh">50万</td>
+            <td class="bzjh">xxxx</td>
+        </tr>
+        <tr>
+            <td  class="tal">火车意外伤害身故和残疾</td>
+            <td class="bzjh">10万</td>
+            <td class="bzjh">20万</td>
+            <td class="bzjh">xxxx</td>
+        </tr>
+        <tr>
+            <td  class="tal">轮船意外伤害身故和残疾</td>
+            <td class="bzjh">10万</td>
+            <td class="bzjh">20万</td>
+            <td class="bzjh">xxxxx</td>
+        </tr>
+        <tr>
+            <td  class="tal">汽车意外伤害身故和残疾</td>
+            <td class="bzjh">10万</td>
+            <td class="bzjh">20万</td>
+            <td class="bzjh">xxxx</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

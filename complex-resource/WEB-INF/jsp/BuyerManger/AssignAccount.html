@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/first/resources/css/layui.css"  media="all">
+    <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+
+</head>
+<body>
+
+
+
+<table class="layui-hide" id="demo"></table>
+
+<script type="text/html" id="toolbarDemo">
+    <div class="demoTable" style="margin-left: 400px; ">
+        工号/姓名：
+        <div class="layui-inline">
+            <input class="layui-input" name="id" id="demoReload" autocomplete="off">
+        </div>
+        <button class="layui-btn" data-type="reload">搜索</button>
+    </div>
+</script>
+
+<script type="text/html" id="checkboxTpl">
+    <!-- 这里的 checked 的状态只是演示 -->
+    <input type="checkbox" name="lock" value="{{d.id}}" title="分配" lay-filter="lockDemo" {{ d.id == 10006 ? 'checked' : '' }}>
+</script>
+
+<script src="/first/resources/Manager/layui.js" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+    layui.use('table', function(){
+        var table = layui.table;
+        form=layui.form;
+        //展示已知数据
+        table.render({
+
+            elem: '#demo'
+            ,toolbar:'#toolbarDemo'
+            ,url:'/first/buyer/findallStaffApply'  //数据请求路径
+            ,cols: [[//标题栏
+                {type:'numbers'}
+                ,{type:'checkbox'} //开启复选框
+                ,{field: 'id', title: '工号', sort: true}
+                ,{field: 'name', title: '姓名'}
+                ,{field: 'sex', title: '性别', width: 60}
+                ,{field: 'department', title: '部门', minWidth: 120}
+                ,{field:'lock', title:'状态', minWidth:110, templet: '#checkboxTpl', unresize: true}
+            ]]
+            // ,data: [{
+            //     "id": "12345"
+            //     ,"name": "欢迎"
+            //     ,"sex": "男"
+            //     ,"department": "后勤"
+            // }, {
+            //     "id": "23456"
+            //     ,"name": "欢迎"
+            //     ,"sex": "男"
+            //     ,"department": "后勤"
+            // }, {
+            //     "id": "34567"
+            //     ,"name": "热烈欢迎"
+            //     ,"sex": "男"
+            //     ,"department": "市场"
+            // }]
+            //,skin: 'line' //表格风格
+            ,even: true
+            ,page: true //是否显示分页
+            //,limits: [5, 7, 10]
+            ,limit: 10 //每页默认显示的数量
+        });
+
+        var $ = layui.$, active = {
+            reload: function(){
+                var demoReload = $('#demoReload');
+
+                //执行重载
+                table.reload('testReload', {
+                    page: {
+                        curr: 1 //重新从第 1 页开始
+                    }
+                    ,where: {
+                        key: {
+                            id: demoReload.val()
+                        }
+                    }
+                }, 'data');
+            }
+        };
+
+        $('.demoTable .layui-btn').on('click', function(){
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+
+
+        form.on('checkbox(lockDemo)', function(obj){
+            layer.tips(this.value + ' ' + this.name + '：'+ obj.elem.checked, obj.othis);
+        });
+    });//监听锁定操作
+</script>
+<div class="resultSatffApply">
+    <a href="/first/insmanager/toGeneratepass"><input type="submit" value="确认"></a>
+</div>
+</body>
+</html>

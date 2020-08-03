@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	@import url(https://fonts.googleapis.com/css?family=Oswald|Roboto);
+body {
+	background: #353535;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+.container {
+	background: #fff;
+    width: 500px;
+    height: 500px;
+    box-shadow: 5px 5px 10px 2px #888;
+}
+.top-bar {
+    text-align: center;
+    background: #29CDB5;
+    width: 500px;
+    height: 300px;
+}
+.top-bar .fa-check-circle-o {
+    color: white;
+    margin-top: 5px;
+    font-size: 18em;
+}
+.bottom-bar {
+
+    text-align: center;
+}
+.bottom-bar h1 {
+    color: #444;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    margin-bottom: -10px;
+}
+.bottom-bar p {
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+.bottom-bar button {
+    background: white;
+    border: 3px solid #29CDB5;
+    color: #444;
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+    outline: none;
+    transition: all 0.3s ease-in;
+}
+.bottom-bar button:hover {
+    background: #29CDB5;
+    color: white;
+}
+	</style>
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<div class="container">
+    <div class="top-bar">
+        <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+    </div>
+    <div class="bottom-bar">
+        <h1>修改成功！</h1>
+        <p>请牢记您的新密码</p>
+        <button onclick="javascrtpt:window.location.href='员工界面2.0.html'">立即返回</button>
+    </div>
+</div>
+</body>
+</html>
