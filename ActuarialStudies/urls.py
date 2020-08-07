@@ -18,5 +18,16 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test/', include('APPS.testApp.urls')),
+    path('test/', include('APPS.testApp.urls',namespace='test')),
+    path('aboutus/',include('APPS.AboutUs.urls',namespace='aboutus')),
+    path('boss/',include('APPS.boss.urls',namespace='boss')),
+    path('buyermanager/',include('APPS.BuyerManager',namespace='buyermanager')),
+    path('customer/',include('APPS.Customer',namespace='customer')),
+    path('departmentmanager/',include('APPS.DepartmentManager',namespace='departmentmanager')),
+    path('finance/',include('APPS.Finance',namespace='finance')),
+    path('homepage/',include('APPS.HomePage',namespace='homepage')),
+    path('icseller',include('APPS.ICseller',namespace='icseller')),
+    path('login/',include('APPS.Login',namespace='login')),
+    path('news/',include('APPS.news',namespace='news')),
+    path('pibuy/',include('APPS.PIBuy',namespace='pibuy')),
 ]

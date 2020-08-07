@@ -8,16 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <!-- Favicon -->
-    <link rel="icon" href="../Login/关于我们/assets/images/favicon.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="{% static 'images/about_us/favicon.png' %}" type="image/png" sizes="32x32">
     <!-- All CSS -->
-    <link rel="stylesheet" href="../Login/关于我们/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../Login/关于我们/assets/css/aos.min.css">
-    <link rel="stylesheet" href="../Login/关于我们/assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="../Login/关于我们/assets/css/magnific.min.css">
-    <link rel="stylesheet" href="../Login/关于我们/assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../Login/关于我们/assets/css/select2.min.css">
-    <link rel="stylesheet" href="../Login/关于我们/assets/css/slimmenu.min.css">
-    <link rel="stylesheet" href="../Login/关于我们/assets/css/style.css">
+    <link rel="stylesheet" href="{% static 'css/about_us/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about_us/aos.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about_us/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about_us/magnific.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about_us/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about_us/select2.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about_us/slimmenu.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about_us/style.css' %}">
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 </head>
@@ -28,16 +28,16 @@
             <div class="row">
                <div class="col-lg-2">
                   <div class="logo">
-                     <a href="index.html"><img src="../Login/关于我们/assets/images/logo.png" alt="image" /></a>
+                     <a href="{% url 'aboutus:index' %}"><img src="{% static 'images/about_us/logo.png' %}" alt="image" /></a>
                   </div>
                </div>
                <div class="col-lg-10">
                   <div class="header-container d-flex justify-content-between highlight">
                      <nav class="highlight">
                         <ul id="responsive-menu" class="slimmenu">
-                           <li><a class="nav-link" href="index.html">Home</a></li>
-                           <li class="nav-item"><a class="nav-link" href="../Login/关于我们/about.html">About</a></li>
-                           <li class="nav-item"><a href="contact.html">Contact</a></li>
+                           <li><a class="nav-link" href="{% url 'aboutus:index' %}">Home</a></li>
+                           <li class="nav-item"><a class="nav-link" href="{% url 'aboutus:about' %}">About</a></li>
+                           <li class="nav-item"><a href="{% url  'aboutus:contact'%}">Contact</a></li>
                         </ul>
                      </nav>
                   </div>
@@ -54,7 +54,7 @@
                     <div class="banner-text text-center">
                         <h1 class="big-size">新闻中心</h1>
 						<ul class="breadcumb list-inline">
-							<li class="list-inline-item"><a href="index.html">NEWS</a></li>
+							<li class="list-inline-item"><a href="{% url 'news:news'%}">NEWS</a></li>
 							
 						</ul>
                     </div>
@@ -90,20 +90,20 @@
       <!-- ==================== END PRELOADER HERE ===================================== -->		
       <!-- ====================ALL JS FILE HERE===================================== -->
       <!-- jQuery -->
-	  <script src="../Login/关于我们/assets/js/modules/jquery-3.4.1.min.js"></script>
-	  <script src="../Login/关于我们/assets/js/modules/bootstrap.min.js"></script>
-	  <script src="../Login/关于我们/assets/js/modules/proper.js"></script>
-	  <script src="../Login/关于我们/assets/js/modules/jquery.waypoints.min.js"></script>
-	  <script src="../Login/关于我们/assets/js/modules/owl.carousel.min.js"></script>
-	  <script src="../Login/关于我们/assets/js/modules/magnific.min.js"></script>
-	  <script src="../Login/关于我们/assets/js/modules/typing.min.js"></script>
-	  <script src="../Login/关于我们/assets/js/modules/select2.min.js"></script>
-	  <script src="../Login/关于我们/assets/js/modules/aos.min.js"></script>
-	  <script src="../Login/关于我们/assets/js/modules/slimmenu.min.js"></script>
+	  <script src="{% static 'js/public/jquery-3.4.1.min.js' %}../Login/关于我们/assets/js/modules/jquery-3.4.1.min.js"></script>
+	  <script src="{% static 'js/public/bootstrap.min.js' %}"></script>
+	  <script src="{% static 'js/public/proper.js' %}"></script>
+	  <script src="{% static 'js/public/jquery.waypoints.min.js' %}"></script>
+	  <script src="{% static 'js/public/owl.carousel.min.js' %}"></script>
+	  <script src="{% static 'js/public/magnific.min.js' %}"></script>
+	  <script src="{% static 'js/public/typing.min.js' %}"></script>
+	  <script src="{% static 'js/public/select2.min.js' %}"></script>
+	  <script src="{% static 'js/public/aos.min.js' %}"></script>
+	  <script src="{% static 'js/public/slimmenu.min.js' %}"></script>
 	  <!-- vendor 
       <script src="assets/js/vendor.min.js"></script>
 	   -->
-      <script src="../Login/关于我们/assets/js/app.js"></script>
+      <script src="{% static 'js/about_us/app.js' %}"></script>
 	  
    </body>
 </html>
