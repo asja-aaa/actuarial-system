@@ -1,27 +1,26 @@
 from django.shortcuts import render
-from django.template import loader
 # Create your views here.
 
 def assignaccount(requests):
-    return render(requests,loader.get_template('BuyerManger/AssignAccount.html'))
+    return render(requests,'BuyerManger/AssignAccount.html')
 
 def checkfile(requests):
-    return render(requests,loader.get_template('BuyerManger/CheckFile.html'))
+    return render(requests,'BuyerManger/CheckFile.html')
 
 def closeaccount(requests):
-    return render(requests,loader.get_template('BuyerManger/CloseAccount.html'))
+    return render(requests,'BuyerManger/CloseAccount.html')
 
 def department(requests):
-    return render(requests,loader.get_template('BuyerManger/Department.html'))
+    return render(requests,'BuyerManger/Department.html')
 
 def frame(requests):
-    return render(requests,loader.get_template('BuyerManger/Frame.html'))
+    return render(requests,'BuyerManger/Frame.html')
 
 def password(requests):
-    return render(requests,loader.get_template('BuyerManger/Password.html'))
+    return render(requests,'BuyerManger/Password.html')
 
 def test(requests):
-    return render(requests,loader.get_template('BuyerManger/test.html'))
+    return render(requests,'BuyerManger/test.html')
 
 def viewdetail(requests):
-    return render(requests,loader.get_template('BuyerManger/ViewDetail.html'))
+    return render(requests,'BuyerManger/ViewDetail.html')

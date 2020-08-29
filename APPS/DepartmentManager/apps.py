@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class DepartmentmanagerConfig(AppConfig):
-    name = 'DepartmentManager'
+    name = 'departmentmanager'

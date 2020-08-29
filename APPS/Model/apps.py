@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class ModelConfig(AppConfig):
-    name = 'Modle'
+    name = 'model'

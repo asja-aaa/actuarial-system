@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 
+app_name = 'buyermanager'
 urlpatterns = [
     path('assignaccount/', views.assignaccount,name='assignaccount'),
     path('checkfile/',views.checkfile,name='checkfile'),
