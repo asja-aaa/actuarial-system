@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <title>理赔查询</title>
-    <link rel="stylesheet"  href="/css/customerStaff.css" />
+        <link rel="stylesheet" href="{% static 'css/customer/customerStaff.css' %}"/>
 <!--        <link rel="stylesheet"  type="text/css" href="/css/chart.css" />-->
-    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-    <script type="text/javascript" src="/first/js/myfocus-2.0.1.min.js"></script>
-    <script type="text/javascript" src="/first/js/SuperSlide.js"></script>
-    <script src="/first/js/cus.js"></script>
+    <script type="text/javascript" src="{% static 'js/public/jquery.1.12.4.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/public/myfocus-2.0.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/public/SuperSlide.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/customer/cus.js' %}"></script>
     <script>
         $(document).ready(function () {
             var data = window.sessionStorage.getItem("user");
@@ -31,20 +32,20 @@
         }
     </style>
 
-    <link rel="stylesheet" type="text/css" href="/first/css/table.css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/table.css' %}" />
 </head>
 <body>
 <!-- logo -->
 <div class="top">
     <div class="logo">
-        <img src="/images/logo.png"  alt="BUPT INSURANCE" />
+        <img src="{% static 'images/customer/logo.png' %}"  alt="BUPT INSURANCE" />
     </div>
     <div class="menu">
         <ul>
             <li class="showName" style="display:block;padding:5px 25px;background: rgba(255, 52, 14, 0.67);color:#fff;text-decoration:none;"></li>
-            <li><a href="/first/customer/customerIndex" onclick="removeSession()">退出</a></li>
-            <li><a href="/first/customer/cusInfo">个人中心</a></li>
-            <li><a href="/first/customer/cusLogin">登录/注册</a></li>
+            <li><a href="{% url 'customer:customerindex' %}" onclick="removeSession()">退出</a></li>
+            <li><a href="{% url 'customer:cusinfo' %}">个人中心</a></li>
+            <li><a href="#"">登录/注册</a></li>
         </ul>
     </div>
     <div class="headfont">
@@ -55,27 +56,27 @@
 <div class="navbar">
     <ul class="navbarMenu">
         <li><a href="">主页</a></li>
-        <li><a href="个人信息修改.html">个人信息管理</a>
+        <li><a href="{% url 'customer:cusinfo' %}">个人信息管理</a>
             <ul class="navbarSubmenu">
-                <li><a href="个人信息修改.html">修改个人信息</a></li>
-                <li><a href="银行卡管理.html">银行卡管理</a></li>
+                <li><a href="{% url 'customer:selfmsgmodify' %}">修改个人信息</a></li>
+                <li><a href="{% url 'customer:bankcard' %}">银行卡管理</a></li>
                 <!--                     <li><a href="#">three</a></li>
                                     <li><a href="#">four</a></li>
                                     <li><a href="#">five</a></li>
                                     <li><a href="#">six</a></li> -->
             </ul>
         </li>
-        <li><a href="个人保险购买.html">购买保险</a>
+        <li><a href="{% url 'customer:selfbuy' %}">购买保险</a>
             <ul class="navbarSubmenu">
-                <li><a href="个人保险购买.html">个人保险</a></li>
-                <li><a href="团体保险购买.html">团体保险</a></li>
+                <li><a href="{% url 'customer:selfbuy' %}">个人保险</a></li>
+                <li><a href="{% url 'customer:teamins' %}">团体保险</a></li>
                 <!--                    <li><a href="#">three</a></li>
                                    <li><a href="#">four</a></li>
                                    <li><a href="#">five</a></li>
                                    <li><a href="#">six</a></li> -->
             </ul>
         </li>
-        <li><a href="公司团体保险.html">公司团体保险</a>
+        <li><a href="{% url 'customer:companyinsurance' %}">公司团体保险</a>
             <ul class="navbarSubmenu">
                 <!--                     <li><a href="#">one</a></li>
                                     <li><a href="#">two</a></li>
@@ -85,9 +86,9 @@
                                     <li><a href="#">six</a></li> -->
             </ul>
         </li>
-        <li><a href="理赔查询.html">理赔查询</a></li>
-        <li><a href="自助理赔.html">自助理赔</a></li>
-        <li><a href="修改密码.html">修改密码</a></li>
+        <li><a href="{% url 'customer:insurancesearch' %}">理赔查询</a></li>
+        <li><a href="{% url 'customer:selfclaim' %}">自助理赔</a></li>
+        <li><a href="{% url 'customer:modifypswd' %}">修改密码</a></li>
     </ul>
 </div>
 <div class="formControl">

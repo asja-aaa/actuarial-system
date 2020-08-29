@@ -31,3 +31,4 @@ urlpatterns = [
     path('pibuy/', include('APPS.pibuy.urls', namespace='pibuy')),
     
 ]
+

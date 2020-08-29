@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet"  href="/css/passChange.css" />
-    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/myfocus-2.0.1.min.js"></script>
-    <script type="text/javascript" src="/js/SuperSlide.js"></script>
-    <script src="/js/cus.js"></script>
+    <link rel="stylesheet" href="{% static 'css/customer/passChange.css' %}"/>
+    <script type="text/javascript" src="{% static 'js/public/jquery.1.12.4.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/public/myfocus-2.0.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/public/SuperSlide.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/customer/cus.js' %}"></script>
 </head>
 <body>
 

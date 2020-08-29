@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-{% load static %}
+{% load static%}
 <head>
 	<meta charset="UTF-8">
-	<title>团体保险购买界面</title>
+	<title>购买保险界面</title>
 	<style>
  *{
     padding: 0;
@@ -307,13 +306,13 @@ a[target="_blank"]:hover:after {
 		  <img src="{% static 'images/customer/logo.png' %}"  alt="BUPT INSURANCE" />
 	   </div>
 	   <div class="headfont">
-		  <p>团体保险 </p>
+		  <p>个人保险 </p>
 	   </div>
 	</div>
 
     <div class="navbar">
         <ul class="navbarMenu">
-            <li><a href="{% url 'customer:staff' %}">员工主页</a></li>
+            <li><a href="">主页</a></li>
             <li><a href="{% url 'customer:cusinfo' %}">个人信息管理</a>
                 <ul class="navbarSubmenu">
                     <li><a href="{% url 'customer:selfmsgmodify' %}">修改个人信息</a></li>

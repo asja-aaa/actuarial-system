@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
@@ -437,7 +438,7 @@ body {
 	</style>
 </head>
 <body>
-	<script src="https://wow.techbrood.com/libs/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="{% static 'js/public/jquery.1.12.4.min.js' %}"></script>
 <script src="https://wow.techbrood.com/libs/angular/angular.min.js"></script>
 <div class='app' ng-app='wallet-app' ng-cloak='true'>
     <div class='app_inner'>
