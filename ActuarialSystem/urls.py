@@ -18,17 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('aboutus/', include('APPS.aboutus.urls',namespace='aboutus')),
-    path('boss/', include('APPS.boss.urls',namespace='boss')),
-    path('buyermanager/', include('APPS.buyermanager.urls',namespace='buyermanager')),
-    path('customer/', include('APPS.customer.urls',namespace='customer')),
-    path('departmentmanager/', include('APPS.departmentmanager.urls',namespace='departmentmanager')),
-    path('finance/', include('APPS.finance.urls',namespace='finance')),
     path('homepage/', include('APPS.homepage.urls',namespace='homepage')),
-    path('icseller', include('APPS.icseller.urls',namespace='icseller')),
-    path('login/', include('APPS.login.urls',namespace='login')),
-    path('news/', include('APPS.news.urls', namespace='news')),
-    path('pibuy/', include('APPS.pibuy.urls', namespace='pibuy')),
     
 ]
 

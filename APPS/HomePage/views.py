@@ -2,11 +2,10 @@ from django.shortcuts import render
 from django.template import loader
 # Create your views here.
 
-def groupinsur(requests):
-    return render(requests,'HomePage/GroupInsur.html')
 
-def homepage(requests):
-    return render(requests,'HomePage/homePage1.0.html')
 
-def personinsur(requests):
-    return render(requests,'HomePage/PersonInsur.html')
+def home(requests):
+    return render(requests, 'home/home.html')
+
+def index(requests):
+    return render(requests,'home/index.html')

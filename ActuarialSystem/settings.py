@@ -38,17 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
        # 'APPS.Model',
-    'APPS.aboutus',
-    'APPS.boss',
-    'APPS.buyermanager',
-    'APPS.customer',
-    'APPS.departmentmanager',
-    'APPS.finance',
     'APPS.homepage',
-    'APPS.icseller',
-    'APPS.login',
-    'APPS.news',
-    'APPS.pibuy',
 ]
 
 MIDDLEWARE = [
@@ -92,7 +82,7 @@ WSGI_APPLICATION = 'ActuarialSystem.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'actuarial_studies',
+        'NAME': 'actuarialdb',
         'USER': 'jlmnb',
         'PASSWORD': '123456',
         'HOST': '127.0.0.1',
