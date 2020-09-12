@@ -1,0 +1,269 @@
+{% extends 'homepage/template.html' %}
+{% block mainbody %}
+
+  <!--================Blog Area =================-->
+  <section class="blog_area area-padding">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 mb-5 mb-lg-0">
+                  <div class="blog_left_sidebar">
+                      <article class="blog_item">
+                        <div class="blog_item_img"><a href="{% url 'homepage:blogdetial' %}">
+                          <img class="card-img rounded-0" src="../../static/img/blog/blog1.png" alt=""></a>
+                          <a href="{% url 'homepage:blogdetial' %}" class="blog_item_date">
+                            <h3>15</h3>
+                            <p>8月</p>
+                          </a>
+                        </div>
+                        
+                        <div class="blog_details">
+                            <a class="d-inline-block" href="{% url 'homepage:blogdetial' %}">
+                                <h2>夫妻癌症险</h2>
+                            </a>
+                            <p>夫妻癌症险多少岁开始买，比较划算</p>
+                            <ul class="blog-info-link">
+                              <li><a href="{% url 'homepage:blogdetial' %}"><i class="far fa-user"></i>12，100浏览</a></li>
+                              <li><a href="{% url 'homepage:blogdetial' %}"><i class="far fa-comments"></i> 1，200评论</a></li>
+                            </ul>
+                        </div>
+                      </article>
+                      
+                      <article class="blog_item">
+                        <div class="blog_item_img"><a href="{% url 'homepage:blogdetial' %}">
+                            <img class="card-img rounded-0" src="../../static/img/blog/blog2.png" alt=""></a>
+                          <a href="{% url 'homepage:blogdetial' %}" class="blog_item_date">
+                            <h3>10</h3>
+                            <p>9月</p>
+                          </a>
+                        </div>
+                        
+                        <div class="blog_details">
+                            <a class="d-inline-block" href="{% url 'homepage:blogdetial' %}">
+                                <h2>超值旅游险</h2>
+                            </a>
+                            <p>去境外旅游，卖多少钱的保险才合适呢？</p>
+                            <ul class="blog-info-link">
+                              <li><a href="{% url 'homepage:blogdetial' %}"><i class="far fa-user"></i> 8，700浏览</a></li>
+                              <li><a href="{% url 'homepage:blogdetial' %}"><i class="far fa-comments"></i> 801评论</a></li>
+                            </ul>
+                        </div>
+                      </article>
+
+                      <article class="blog_item">
+                        <div class="blog_item_img">
+                            <a href="{% url 'homepage:blogdetial' %}">
+                                <img class="card-img rounded-0" src="../../static/img/blog/blog3.jpg" alt=""></a>
+                          <a href="{% url 'homepage:blogdetial' %}" class="blog_item_date">
+                            <h3>15</h3>
+                            <p>7月</p>
+                          </a>
+                        </div>
+                        
+                        <div class="blog_details">
+                            <a class="d-inline-block" href="{% url 'homepage:blogdetial' %}">
+                                <h2>居家防盗险</h2>
+                            </a>
+                            <p>居家防盗险，理赔方便吗？</p>
+                            <ul class="blog-info-link">
+                              <li><a href="{% url 'homepage:blogdetial' %}"><i class="far fa-user"></i> 5，800浏览</a></li>
+                              <li><a href="{% url 'homepage:blogdetial' %}"><i class="far fa-comments"></i>230评论</a></li>
+                            </ul>
+                        </div>
+                      </article>
+
+
+
+                      <article class="blog_item">
+                        <div class="blog_item_img">
+                            <a href="{% url 'homepage:blogdetial' %}">
+                                <img class="card-img rounded-0" src="{% url 'homepage:blogdetial' %}" alt=""></a>
+                          <a href="{% url 'homepage:blogdetial' %}" class="blog_item_date">
+                            <h3>10</h3>
+                            <p>9月</p>
+                          </a>
+                        </div>
+
+                        <div class="blog_details">
+                            <a class="d-inline-block" href="{% url 'homepage:blogdetial' %}">
+                                <h2>超值旅游险</h2>
+                            </a>
+                            <p>去境外旅游，买多少钱的保险才合适呢？</p>
+                            <ul class="blog-info-link">
+                              <li><a href="{% url 'homepage:blogdetial' %}"><i class="far fa-user"></i> 8，700浏览</a></li>
+                              <li><a href="{% url 'homepage:blogdetial' %}"><i class="far fa-comments"></i> 801评论</a></li>
+                            </ul>
+                        </div>
+                      </article>
+
+
+
+
+                      
+
+
+                      <nav class="blog-pagination justify-content-center d-flex">
+                          <ul class="pagination">
+                              <li class="page-item">
+                                  <a href="#" class="page-link" aria-label="Previous">
+                                      <i class="ti-angle-left"></i>
+                                  </a>
+                              </li>
+                              <li class="page-item">
+                                  <a href="#" class="page-link">1</a>
+                              </li>
+                              <li class="page-item active">
+                                  <a href="#" class="page-link">2</a>
+                              </li>
+                              <li class="page-item">
+                                  <a href="#" class="page-link" aria-label="Next">
+                                      <i class="ti-angle-right"></i>
+                                  </a>
+                              </li>
+                          </ul>
+                      </nav>
+                  </div>
+              </div>
+              <div class="col-lg-4">
+                  <div class="blog_right_sidebar">
+                      <aside class="single_sidebar_widget search_widget">
+                          <form action="#">
+                            <div class="form-group">
+                              <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="搜索关键字">
+                                <div class="input-group-append">
+                                  <button class="btn" type="button"><i class="ti-search"></i></button>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="button rounded-0 primary-bg text-white w-100" type="submit">搜索</button>
+                          </form>
+                      </aside>
+
+                      <aside class="single_sidebar_widget post_category_widget">
+                        <h4 class="widget_title">分类</h4>
+                        <ul class="list cat-list">
+                            <li>
+                                <a href="#" class="d-flex">
+                                    <p>保险理赔</p>
+                                    <p>(37)</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex">
+                                    <p>保险细则</p>
+                                    <p>(10)</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex">
+                                    <p>经验分享</p>
+                                    <p>(03)</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex">
+                                    <p>保险选购</p>
+                                    <p>(11)</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex">
+                                    <p>保险意义</p>
+                                    <p>(21)</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex">
+                                    <p>保险收益</p>
+                                    <p>(09)</p>
+                                </a>
+                            </li>
+                        </ul>
+                      </aside>
+
+                      <aside class="single_sidebar_widget popular_post_widget">
+                          <h3 class="widget_title">近期发帖</h3>
+                          <div class="media post_item">
+                              <img src="../../static/img/blog/popular-post/post1.jpg" alt="post">
+                              <div class="media-body">
+                                  <a href="blogdetial.html">
+                                      <h3>选购保险的10个注意事项</h3>
+                                  </a>
+                                  <p>10分钟前</p>
+                              </div>
+                          </div>
+                          <div class="media post_item">
+                              <img src="../../static/img/blog/popular-post/post2.jpg" alt="post">
+                              <div class="media-body">
+                                  <a href="blogdetial.html">
+                                      <h3>理赔的正确流程</h3>
+                                  </a>
+                                  <p>2小时前</p>
+                              </div>
+                          </div>
+                          <div class="media post_item">
+                              <img src="../../static/img/blog/popular-post/post3.jpg" alt="post">
+                              <div class="media-body">
+                                  <a href="blogdetial.html">
+                                      <h3>教育保险的那些坑</h3>
+                                  </a>
+                                  <p>一天前</p>
+                              </div>
+                          </div>
+                          <div class="media post_item">
+                              <img src="../../static/img/blog/popular-post/post4.jpg" alt="post">
+                              <div class="media-body">
+                                  <a href="blogdetial.html">
+                                      <h3>保险公司的流氓策略</h3>
+                                  </a>
+                                  <p>2020/9/11</p>
+                              </div>
+                          </div>
+                      </aside>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!--================Blog Area =================-->
+<div class="latest-news  area-padding-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="area-heading">
+                    <h3>让生活更加多滋美味</h3>
+                    <p>北邮太平  给您的生活带来更多保障</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<!-- ================ Instargram Area Starts ================= -->  
+
+    <section class="instagram">
+        <div class="row no-gutters">
+            <div class="col-2">
+                <a href=""><img src="../../static/img/instagram/1.jpg" alt=""></a>
+            </div>
+            <div class="col-2">
+                <a href=""><img src="../../static/img/instagram/2.jpg" alt=""></a>
+            </div>
+            <div class="col-2">
+                <a href=""><img src="../../static/img/instagram/3.jpg" alt=""></a>
+            </div>
+            <div class="col-2">
+                <a href=""><img src="../../static/img/instagram/4.jpg" alt=""></a>
+            </div>
+            <div class="col-2">
+                <a href=""><img src="../../static/img/instagram/5.jpg" alt=""></a>
+            </div>
+            <div class="col-2">
+                <a href=""><img src="../../static/img/instagram/6.jpg" alt=""></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================ Instargram Area End ================= -->  
+
+{% endblock mainbody %}
