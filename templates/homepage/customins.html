@@ -1,5 +1,100 @@
 {% extends 'homepage/template.html' %}
 
 {% block mainbody%}
+    <div class="container" style="background-color: #9fcdff">
+        <div class="row" style="text-align: center">
+            <div class="col-lg-8" style="margin: 0 auto" >
+                <H4 style="padding-top: 25px">定制化您的私人保险</H4>
+                <form action="#">
+                    <div class="row" style="padding-top: 20px">
+                         <div class="col-lg-6">
+                        <div style="padding-top: 25px">
+                            <input type="text" name="first_name" placeholder="姓名" onfocus="this.placeholder = ''" onblur="this.placeholder = '姓名'" required class="single-input">
+                        </div>
+                        <div style="padding-top: 25px">
+                            <input type="text" name="last_name" placeholder="职业" onfocus="this.placeholder = ''" onblur="this.placeholder = '职业'" required class="single-input">
+                        </div>
+                        <div style="padding-top: 25px">
+                            <input type="text" name="last_name" placeholder="病史" onfocus="this.placeholder = ''" onblur="this.placeholder = '病史'" required class="single-input">
+                        </div>
+                       <div style="padding-top: 25px">
+                            <input type="text" name="last_name" placeholder="期望保险类型" onfocus="this.placeholder = ''" onblur="this.placeholder = '期望保险类型'" required class="single-input">
+                        </div>
+                   </div>
+                         <div class="col-lg-6">
+                        <div style="padding-top: 25px">
+                            <input type="text" name="first_name" placeholder="年龄" onfocus="this.placeholder = ''" onblur="this.placeholder = '年龄'" required class="single-input">
+                        </div>
+                        <div style="padding-top: 25px">
+                            <input type="text" name="last_name" placeholder="学历" onfocus="this.placeholder = ''" onblur="this.placeholder = '学历'" required class="single-input">
+                        </div>
+                        <div style="padding-top: 25px">
+                            <input type="text" name="last_name" placeholder="是否已婚" onfocus="this.placeholder = ''" onblur="this.placeholder = '是否已婚'" required class="single-input">
+                        </div>
+                       <div style="padding-top: 25px">
+                            <input type="text" name="last_name" placeholder="期望月供" onfocus="this.placeholder = ''" onblur="this.placeholder = '期望月供'" required class="single-input">
+                        </div>
+                   </div>
+                    </div>
+                     <div class="row" style="padding-top: 20px">
+                        <div class="col-lg-3">
+                            <div class="single-element-widget">
+                        <div class="switch-wrap d-flex justify-content-between">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;3000以下</p>
+                            <div class="primary-checkbox">
+                                <input type="checkbox" id="1">
+                                <label for="1"></label>
+                            </div>
+                        </div>
+                        <div class="switch-wrap d-flex justify-content-between">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;3000~8000</p>
+                            <div class="primary-checkbox">
+                                <input type="checkbox" id="2" >
+                                <label for="2"></label>
+                            </div>
+                        </div>
+                                <div class="switch-wrap d-flex justify-content-between">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;8000~12000</p>
+                            <div class="primary-checkbox">
+                                <input type="checkbox" id="3" checked>
+                                <label for="3"></label>
+                            </div>
+                        </div>
+                                <div class="switch-wrap d-flex justify-content-between">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;12000~20000</p>
+                            <div class="primary-checkbox">
+                                <input type="checkbox" id="4" >
+                                <label for="4"></label>
+                            </div>
+                        </div>
+                                <div class="switch-wrap d-flex justify-content-between">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;20000以上</p>
+                            <div class="primary-checkbox">
+                                <input type="checkbox" id="5" >
+                                <label for="5"></label>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 20px">
+                        <div class="col-lg-12">
+                            <div class="mt-10">
+                                 <textarea class="single-textarea" placeholder="自我情况详述" onfocus="this.placeholder = ''" onblur="this.placeholder = '自我情况详述'" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="row" style="padding-top: 20px">
+                        <div class="col-lg-12" style="padding-bottom: 30px">
+                            <div class="button-group-area mt-10">
+              <a href="#" class="genric-btn success-border circle arrow">提交<span class="lnr lnr-arrow-right"></span></a>
+                                </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            </div>
+    </div>
 
 {% endblock mainbody %}

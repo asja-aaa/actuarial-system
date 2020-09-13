@@ -8,6 +8,10 @@ def home(requests):
     return render(requests, 'homepage/index.html')
 
 def index(requests):
+    s = requests.POST.get("name")
+    y = requests.POST.get("password")
+    print(s)
+    print(y)
     return render(requests,'homepage/index.html')
 
 def selfins(requests):
