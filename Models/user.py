@@ -23,8 +23,4 @@ class User(models.Model):
         db_table = 'user'
         app_label = 'welcome'
 
-def find_name_password(name,password):
-    for user in User.objects.all():
-        if user.user_name == name and user.user_password == password:
-            return True
-    return False
+

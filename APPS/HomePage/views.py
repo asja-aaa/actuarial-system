@@ -37,3 +37,8 @@ def customins(requests):
 
 def test(requests):
     return render(requests,'homepage/ddddddd.html')
+
+def logout(requests):
+    # 删除当前会话的session
+    requests.session.flush()
+    return render(requests,'welcome/index.html')
