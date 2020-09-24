@@ -223,6 +223,11 @@ CREATE TABLE `django_session`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
+-- Records of django_session
+-- ----------------------------
+INSERT INTO `django_session` VALUES ('918g2ncxkdkfhr8440j8jro17d0rc0lz', 'ODBkYmU5N2I1ZTU5NDM5MDA0MmYyY2NkODM1ZTI0NmFiMDRlMGExYjp7ImpsbW5iIjoiMTAwMDAxIiwiX3Nlc3Npb25fZXhwaXJ5Ijo2MDQ4MDB9', '2020-09-29 10:37:12.226243');
+
+-- ----------------------------
 -- Table structure for insurance
 -- ----------------------------
 DROP TABLE IF EXISTS `insurance`;
@@ -258,6 +263,47 @@ CREATE TABLE `insurance_type`  (
 -- Records of insurance_type
 -- ----------------------------
 INSERT INTO `insurance_type` VALUES (0, '个人保险');
+
+-- ----------------------------
+-- Table structure for post
+-- ----------------------------
+DROP TABLE IF EXISTS `post`;
+CREATE TABLE `post`  (
+  `post_id` char(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `post_time` datetime(0) NOT NULL,
+  `post_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `post_info` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `post_looked` int(10) NULL DEFAULT NULL,
+  `post_lmsg` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `post_type` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `post_picurl` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`post_id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of post
+-- ----------------------------
+INSERT INTO `post` VALUES ('100001', '2020-09-22 18:53:31', '境外旅游险', '出国旅游，异域风情让人流连忘返，但突发意外也会让我们措手不及。 最近微博有位女孩爆出父母在伊朗遭遇严重车祸，母亲身故、父亲重伤急需紧急救援，对保险公司不作为表达了自己的愤怒。 相信很多人一定对紧急救援存在很多疑惑，今天深蓝君就通过一篇文章，一起看看旅游意外险到底怎么选？主要内容如下：', 8700, '800', '1-2-3', NULL);
+
+-- ----------------------------
+-- Table structure for post_type
+-- ----------------------------
+DROP TABLE IF EXISTS `post_type`;
+CREATE TABLE `post_type`  (
+  `post_type_id` char(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `post_type_name` char(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  PRIMARY KEY (`post_type_id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of post_type
+-- ----------------------------
+INSERT INTO `post_type` VALUES ('1', '保险理赔');
+INSERT INTO `post_type` VALUES ('2', '保险细则');
+INSERT INTO `post_type` VALUES ('3', '经验分享');
+INSERT INTO `post_type` VALUES ('4', '保险选购');
+INSERT INTO `post_type` VALUES ('5', '保险意义');
+INSERT INTO `post_type` VALUES ('6', '保险收益');
 
 -- ----------------------------
 -- Table structure for user
