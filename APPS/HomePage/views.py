@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 # Create your views here.
-
-
+from Models import  post
+from Models import  post_type
 
 def home(requests):
     return render(requests, 'homepage/index.html')
@@ -24,6 +24,7 @@ def inshelp(requests):
     return render(requests,'homepage/inshelp.html')
 
 def blog(requests):
+
     return render(requests,'homepage/blog.html')
 
 def blogdetial(requests):
