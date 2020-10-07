@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8886adc9-5a87-44f7-9cda-528a8970e0c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/sql/actuarialdb.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Models/sql/actuarialdb.sql" afterDir="false" />
-    </list>
+    <list default="true" id="8886adc9-5a87-44f7-9cda-528a8970e0c6" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -157,7 +154,7 @@
       <workItem from="1600080512254" duration="1786000" />
       <workItem from="1600338966478" duration="3378000" />
       <workItem from="1600770810740" duration="3325000" />
-      <workItem from="1600923778942" duration="228000" />
+      <workItem from="1600923778942" duration="457000" />
     </task>
     <servers />
   </component>
