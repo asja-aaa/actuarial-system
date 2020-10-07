@@ -8,16 +8,5 @@
 from django.db import models
 
 
-class Insurance(models.Model):
-    ins_id = models.CharField(primary_key=True, max_length=10)
-    ins_initiator_id = models.CharField(max_length=10)
-    ins_type = models.ForeignKey('InsuranceType', models.DO_NOTHING, db_column='ins_type')
-    ins_name = models.CharField(max_length=255)
-    ins_pay = models.CharField(max_length=255)
-    ins_profit = models.CharField(max_length=255)
-    ins_picture = models.CharField(max_length=255, blank=True, null=True)
 
-    class Meta:
-        managed = False
-        db_table = 'insurance'
-        app_label = 'welcome'
+

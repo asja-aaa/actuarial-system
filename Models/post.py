@@ -8,17 +8,4 @@
 from django.db import models
 
 
-class Post(models.Model):
-    post_id = models.CharField(primary_key=True, max_length=10)
-    post_time = models.DateTimeField()
-    post_name = models.CharField(max_length=255)
-    post_info = models.CharField(max_length=255, blank=True, null=True)
-    post_looked = models.IntegerField(blank=True, null=True)
-    post_lmsg = models.CharField(max_length=255, blank=True, null=True)
-    post_type = models.CharField(max_length=50)
-    post_picurl = models.CharField(max_length=255, blank=True, null=True)
 
-    class Meta:
-        managed = False
-        db_table = 'post'
-        app_label = 'homepage'

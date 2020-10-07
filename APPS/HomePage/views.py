@@ -24,7 +24,6 @@ def inshelp(requests):
     return render(requests,'homepage/inshelp.html')
 
 def blog(requests):
-
     return render(requests,'homepage/blog.html')
 
 def blogdetial(requests):

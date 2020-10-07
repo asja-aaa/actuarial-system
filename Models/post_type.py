@@ -8,11 +8,3 @@
 from django.db import models
 
 
-class PostType(models.Model):
-    post_type_id = models.CharField(primary_key=True, max_length=10)
-    post_type_name = models.CharField(max_length=20)
-
-    class Meta:
-        managed = False
-        db_table = 'post_type'
-        app_label = 'homepage'

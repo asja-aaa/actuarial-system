@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+admin.site.login_bg = 'https://pic4.zhimg.com/v2-73b8307b2db44c617f4e8515ce67dd39_r.jpg'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('homepage/', include('APPS.homepage.urls',namespace='homepage')),
+    path('homepage/', include('APPS.HomePage.urls',namespace='homepage')),
     path('welcome/',include('APPS.welcome.urls',namespace='welcome')),
     path('',include('APPS.welcome.urls')),
     

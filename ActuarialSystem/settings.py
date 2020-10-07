@@ -31,13 +31,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    'juss',
+    'juss.apps.JussAdminConfig',
+    'model',
+    #'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'APPS.homepage',
+    'APPS.HomePage',
     'APPS.welcome',
 ]
 
@@ -83,8 +86,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'actuarialdb',
-        'USER': 'jlmnb',
-        'PASSWORD': '123456',
+        'USER': 'root',
+        'PASSWORD': 'jlm200065',
         'HOST': '127.0.0.1',
         'PORT': '3306'
     }
@@ -110,6 +113,22 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+JUSS_LEFT_MENU = [
+    {'label': '后台导航', 'children':[
+        {'label':'首页', 'path':'/admin/'},
+        {'label':'用户', 'path':'/admin/model/user'},
+        {'label':'用户类型', 'path':'/admin/model/usertype'},
+        {'label':'保险', 'path':'/admin/model/insurance'},
+        {'label':'保险类型', 'path':'/admin/model/insurancetype'},
+        {'label':'帖子', 'path':'/admin/model/post'},
+        {'label':'帖子类型', 'path':'/admin/model/posttype'},
+    ]},
+    {'label':'认证和授权', 'children':[
+        {'model':'account.user'},
+        {'model':'account.group'},
+    ]}
+]
+
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
@@ -123,6 +142,7 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
 
 
 # Static files (CSS, JavaScript, Images)
