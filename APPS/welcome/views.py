@@ -1,5 +1,6 @@
 from django.shortcuts import render
 import Models.user
+from model.models import User
 # Create your views here.
 def index(requests):
     return render(requests,'welcome/index.html')
@@ -8,7 +9,7 @@ def index(requests):
 def login(requests):
     name = requests.POST.get('name')
     password = requests.POST.get('password')
-    user = Models.User.objects.filter(user_name=name,user_password=password)
+    user = User.objects.filter(user_name=name,user_password=password)
     if user:
         # 添加session 一周后过期
         requests.session[name] = user[0].user_id

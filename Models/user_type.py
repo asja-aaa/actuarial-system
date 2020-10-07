@@ -8,11 +8,3 @@
 from django.db import models
 
 
-class UserType(models.Model):
-    usertype_id = models.IntegerField(primary_key=True)
-    usertype_name = models.CharField(max_length=255)
-
-    class Meta:
-        managed = False
-        db_table = 'user_type'
-        app_label = 'welcome'
