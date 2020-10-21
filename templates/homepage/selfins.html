@@ -1,261 +1,38 @@
 {% extends 'homepage/template.html' %}
 {% block mainbody %}
 
-
-
     <!--================Category  Area Start =================-->
-
-    <section class="category-page area-padding">
-        <div class="container">
-            <div class="row">
-                  <div class="col-lg-4">
-                    <div class="single-blog style-five">
-                        <div class="thumb">
-                            <img class="img-fluid" src="../../static/img/magazine/2.png" alt="">
-                        </div>
-                        <div class="short_details">
-                            <div class="meta-top d-flex">
-                                <a href="#">夫妻癌症险</a>
+        <div>
+            {% for ins in insure %}
+                <div class="product">
+                    <ul>
+                        <li>
+                            <div class="pro-img">
+                                <a href="#">
+                                    <img src="../../static/img/insurance/{{ins.ins_id}}.jpg" alt="">
+                                </a>
                             </div>
-                            <a class="d-block" href="blogdetial.html">
-                                <h4>月供200元，最高理赔100万</h4>
-                            </a>
-                            <div class="meta-bottom d-flex">
-                                <a href="#"><i></i>本月成交12，450单</a>
+                            <h3><a href="#">{{ins.ins_name}}</a></h3>
+                            <p class="price">
+                                <span>{{ins.ins_profit}}</span>元
+                            </p>
+                            <div class="review">
+                                <a href="#">
+                                  <span class="msg">{{ins.ins_ad}}</span>
+                                </a>
                             </div>
-                        </div>
-                    </div>
-
+                        </li>
+                    </ul>
                 </div>
-
-                <div class="col-lg-4">
-                    <div class="single-blog style-five">
-                        <div class="thumb">
-                            <img class="img-fluid" src="../../static/img/magazine/16.jpg" alt="">
-                        </div>
-                        <div class="short_details">
-                            <div class="meta-top d-flex">
-                                <a href="#">家庭健康险</a>
-                            </div>
-                            <a class="d-block" href="blogdetial.html">
-                                <h4>每月仅需30元，最高理赔20万</h4>
-                            </a>
-                            <div class="meta-bottom d-flex">
-                                <a href="#"><i></i>本月成交 10，241单</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="single-blog style-five">
-                        <div class="thumb">
-                            <img class="img-fluid" src="../../static/img/magazine/17.jpg" alt="">
-                        </div>
-                        <div class="short_details">
-                            <div class="meta-top d-flex">
-                                <a href="#">育金保险</a>
-                            </div>
-                            <a class="d-block" href="blogdetial.html">
-                                <h4>疾病、意外、教育基金全程保障</h4>
-                            </a>
-                            <div class="meta-bottom d-flex">
-                                <a href="#"><i></i>本月成交9，453</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                 <div class="col-lg-4">
-                    <div class="single-blog style-five">
-                        <div class="thumb">
-                            <img class="img-fluid" src="../../static/img/magazine/17.jpg" alt="">
-                        </div>
-                        <div class="short_details">
-                            <div class="meta-top d-flex">
-                                <a href="#">育金保险</a>
-                            </div>
-                            <a class="d-block" href="blogdetial.html">
-                                <h4>疾病、意外、教育基金全程保障</h4>
-                            </a>
-                            <div class="meta-bottom d-flex">
-                                <a href="#"><i></i>本月成交9，453</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                 <div class="col-lg-4">
-                    <div class="single-blog style-five">
-                        <div class="thumb">
-                            <img class="img-fluid" src="../../static/img/magazine/2.png" alt="">
-                        </div>
-                        <div class="short_details">
-                            <div class="meta-top d-flex">
-                                <a href="#">夫妻癌症险</a>
-                            </div>
-                            <a class="d-block" href="blogdetial.html">
-                                <h4>月供200元，最高理赔100万</h4>
-                            </a>
-                            <div class="meta-bottom d-flex">
-                                <a href="#"><i></i>本月成交12，450单</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="single-blog style-five">
-                        <div class="thumb">
-                            <img class="img-fluid" src="../../static/img/magazine/16.jpg" alt="">
-                        </div>
-                        <div class="short_details">
-                            <div class="meta-top d-flex">
-                                <a href="#">家庭健康险</a>
-                            </div>
-                            <a class="d-block" href="blogdetial.html">
-                                <h4>每月仅需30元，最高理赔20万</h4>
-                            </a>
-                            <div class="meta-bottom d-flex">
-                                <a href="#"><i></i>本月成交 10，241单</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="single-blog style-five">
-                        <div class="thumb">
-                            <img class="img-fluid" src="../../static/img/magazine/17.jpg" alt="">
-                        </div>
-                        <div class="short_details">
-                            <div class="meta-top d-flex">
-                                <a href="#">育金保险</a>
-                            </div>
-                            <a class="d-block" href="blogdetial.html">
-                                <h4>疾病、意外、教育基金全程保障</h4>
-                            </a>
-                            <div class="meta-bottom d-flex">
-                                <a href="#"><i></i>本月成交9，453</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                 <div class="col-lg-4">
-                    <div class="single-blog style-five">
-                        <div class="thumb">
-                            <img class="img-fluid" src="../../static/img/magazine/17.jpg" alt="">
-                        </div>
-                        <div class="short_details">
-                            <div class="meta-top d-flex">
-                                <a href="#">育金保险</a>
-                            </div>
-                            <a class="d-block" href="blogdetial.html">
-                                <h4>疾病、意外、教育基金全程保障</h4>
-                            </a>
-                            <div class="meta-bottom d-flex">
-                                <a href="#"><i></i>本月成交9，453</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                 <div class="col-lg-4">
-                    <div class="single-blog style-five">
-                        <div class="thumb">
-                            <img class="img-fluid" src="../../static/img/magazine/2.png" alt="">
-                        </div>
-                        <div class="short_details">
-                            <div class="meta-top d-flex">
-                                <a href="#">夫妻癌症险</a>
-                            </div>
-                            <a class="d-block" href="blogdetial.html">
-                                <h4>月供200元，最高理赔100万</h4>
-                            </a>
-                            <div class="meta-bottom d-flex">
-                                <a href="#"><i></i>本月成交12，450单</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="single-blog style-five">
-                        <div class="thumb">
-                            <img class="img-fluid" src="../../static/img/magazine/16.jpg" alt="">
-                        </div>
-                        <div class="short_details">
-                            <div class="meta-top d-flex">
-                                <a href="#">家庭健康险</a>
-                            </div>
-                            <a class="d-block" href="blogdetial.html">
-                                <h4>每月仅需30元，最高理赔20万</h4>
-                            </a>
-                            <div class="meta-bottom d-flex">
-                                <a href="#"><i></i>本月成交 10，241单</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                 <div class="col-lg-4">
-                    <div class="single-blog style-five">
-                        <div class="thumb">
-                            <img class="img-fluid" src="../../static/img/magazine/2.png" alt="">
-                        </div>
-                        <div class="short_details">
-                            <div class="meta-top d-flex">
-                                <a href="#">夫妻癌症险</a>
-                            </div>
-                            <a class="d-block" href="blogdetial.html">
-                                <h4>月供200元，最高理赔100万</h4>
-                            </a>
-                            <div class="meta-bottom d-flex">
-                                <a href="#"><i></i>本月成交12，450单</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="single-blog style-five">
-                        <div class="thumb">
-                            <img class="img-fluid" src="../../static/img/magazine/16.jpg" alt="">
-                        </div>
-                        <div class="short_details">
-                            <div class="meta-top d-flex">
-                                <a href="#">家庭健康险</a>
-                            </div>
-                            <a class="d-block" href="blogdetial.html">
-                                <h4>每月仅需30元，最高理赔20万</h4>
-                            </a>
-                            <div class="meta-bottom d-flex">
-                                <a href="#"><i></i>本月成交 10，241单</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-                <div class="col-12 text-center">
-                    <a href="" class="main_btn">Load More <span class="ti-angle-double-right"></span></a>
-                </div>
-            </div>
+            {% endfor %}
         </div>
-    </section>
     <!--================Category  Area End =================-->
 
-    <!-- ================ Instargram Area Starts ================= -->
 
-        <!--================ Latest news section start =================-->
+
+    <!--================ Latest news section start =================-->
+
+    <!--================ Latest news section end =================-->
 
     <div class="latest-news  area-padding-bottom">
         <div class="container">
@@ -270,8 +47,7 @@
     </div>
 
 
-    <!--================ Latest news section end =================-->
-
+    <!-- ================ Instargram Area Starts ================= -->
     <section class="instagram">
         <div class="row no-gutters">
             <div class="col-2">

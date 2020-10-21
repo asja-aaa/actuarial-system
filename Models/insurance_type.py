@@ -15,4 +15,4 @@ class InsuranceType(models.Model):
     class Meta:
         managed = False
         db_table = 'insurance_type'
-        app_label = 'welcome'
+        app_label = 'homepage'

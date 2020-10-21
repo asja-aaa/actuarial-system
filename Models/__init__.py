@@ -3,4 +3,4 @@
 from .user import *
 from .user_type import *
 from .insurance import *
-from  .insurance_type import *
+from .insurance_type import *

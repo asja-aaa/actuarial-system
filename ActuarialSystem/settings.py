@@ -83,8 +83,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'actuarialdb',
-        'USER': 'jlmnb',
-        'PASSWORD': '123456',
+        'USER': 'root',
+        'PASSWORD': 'shenlin2000',
         'HOST': '127.0.0.1',
         'PORT': '3306'
     }
