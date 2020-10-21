@@ -20,7 +20,7 @@ admin.site.login_bg = 'https://pic4.zhimg.com/v2-73b8307b2db44c617f4e8515ce67dd3
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('homepage/', include('APPS.HomePage.urls',namespace='homepage')),
+    path('homepage/', include('APPS.homepage.urls',namespace='homepage')),
     path('welcome/',include('APPS.welcome.urls',namespace='welcome')),
     path('',include('APPS.welcome.urls')),
     

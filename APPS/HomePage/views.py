@@ -1,17 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 # Create your views here.
-from Models import  post
-from Models import  post_type
+from model import models
 
 def home(requests):
     return render(requests, 'homepage/index.html')
 
 def index(requests):
-    s = requests.POST.get("name")
-    y = requests.POST.get("password")
-    print(s)
-    print(y)
     return render(requests,'homepage/index.html')
 
 def selfins(requests):

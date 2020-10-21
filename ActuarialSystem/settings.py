@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'APPS.HomePage',
+    'APPS.homepage',
     'APPS.welcome',
 ]
 
@@ -86,8 +86,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'actuarialdb',
-        'USER': 'root',
-        'PASSWORD': 'jlm200065',
+        'USER': 'jlmnb',
+        'PASSWORD': '123456',
         'HOST': '127.0.0.1',
         'PORT': '3306'
     }
