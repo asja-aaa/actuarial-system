@@ -32,7 +32,7 @@ class Insurance(models.Model):
     ins_name = models.CharField(max_length=255)
     ins_pay = models.CharField(max_length=255)
     ins_profit = models.CharField(max_length=255)
-    ins_picture = models.CharField(max_length=255, blank=True, null=True)
+    # ins_picture = models.CharField(max_length=255, blank=True, null=True)
 
     class Meta:
         managed = False
