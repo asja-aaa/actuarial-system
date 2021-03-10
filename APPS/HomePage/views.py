@@ -13,6 +13,7 @@ def selfins(requests):
     return render(requests,'homepage/selfins.html')
 
 def teamins(requests):
+    s = requests.session
     return render(requests,'homepage/teamins.html')
 
 def inshelp(requests):

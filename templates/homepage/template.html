@@ -34,7 +34,7 @@
                     <div class="right-button" style="text-align: center">
                         <ul>
                             <li><a id="search" href="javascript:void(0)"><i class="fas fa-search" style="color: #9fcdff"></i></a></li>
-                            <li><a href="" style="color: #9fcdff">你好!&nbsp;&nbsp;{{ user.user_name }}</a></li>
+                            <li><a href="" style="color: #9fcdff">你好!&nbsp;&nbsp;{{ request.session.name}}</a></li>
                             <li><a href="{% url 'homepage:logout' %}" style="color: #9fcdff">登出</a></li>
                         </ul>
                     </div>

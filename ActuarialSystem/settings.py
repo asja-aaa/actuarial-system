@@ -52,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'APPS.welcome.middleware.LoginMiddleware',
 ]
 
 ROOT_URLCONF = 'ActuarialSystem.urls'
@@ -134,7 +135,7 @@ JUSS_LEFT_MENU = [
 
 LANGUAGE_CODE = 'zh-Hans'
 
-TIME_ZONE = 'ASia/Shanghai'
+TIME_ZONE = 'Asia/Shanghai'
 
 
 USE_I18N = True
