@@ -1,3 +1,5 @@
+
+# -*- coding:utf-8 -*-
 from django.db import models
 
 # Create your models here.
@@ -84,3 +86,18 @@ class InsuranceSubtype(models.Model):
         managed = False
         db_table = 'insurance_subtype'
         verbose_name_plural = '保险sub'
+
+
+class Blog(models.Model):
+    blog_id = models.CharField(primary_key=True, max_length=10)
+    blog_name = models.CharField(max_length=50)
+    blog_icon = models.CharField(max_length=100, blank=True, null=True)
+    blog_date = models.DateTimeField()
+    blog_msg = models.CharField(max_length=255, blank=True, null=True)
+    blog_visited = models.CharField(max_length=10, blank=True, null=True)
+    blog_comment = models.CharField(max_length=10, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'blog'
+        verbose_name_plural = '帖子'

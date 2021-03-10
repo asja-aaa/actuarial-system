@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from model.models import Blog
 from django.http import HttpResponseRedirect
 # Create your views here.
 from model import models
@@ -20,7 +21,8 @@ def inshelp(requests):
     return render(requests,'homepage/inshelp.html')
 
 def blog(requests):
-    return render(requests,'homepage/blog.html')
+    blogs = Blog.objects.all()
+    return render(requests,'homepage/blog.html',{'blogs':blogs})
 
 def blogdetial(requests):
     return render(requests, 'homepage/blogdetial.html')
