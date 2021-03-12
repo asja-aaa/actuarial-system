@@ -7,6 +7,7 @@ from .models import Insurance
 from .models import InsuranceType
 from .models import Post
 from .models import PostType
+from .models import Blog
 # Register your models here.
 
 admin.site.site_header = '北邮太平后台管理'
@@ -35,3 +36,4 @@ admin.site.register(Insurance)
 admin.site.register(InsuranceType)
 admin.site.register(Post)
 admin.site.register(PostType)
+
