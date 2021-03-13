@@ -9,7 +9,7 @@ class User(models.Model):
     user_password = models.CharField(max_length=20)
     user_type = models.ForeignKey('UserType', models.DO_NOTHING, db_column='user_type')
     user_gender = models.IntegerField(blank=True, null=True,verbose_name='性别',)
-    user_phone = models.CharField(unique=True, max_length=20, blank=True, null=True,verbose_name='电话',)
+    user_phone = models.CharField(max_length=20, blank=True, null=True,verbose_name='电话',)
     user_email = models.CharField(unique=True, max_length=40, blank=True, null=True,verbose_name='邮箱',)
     user_icon = models.CharField(max_length=255, blank=True, null=True)
 
